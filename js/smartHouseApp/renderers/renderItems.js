@@ -16,7 +16,7 @@ export function renderItems(block, itemsArray, currentPage) {
             for (let i = 0; i < itemsArray.length; i++) {                               
                 content = `
                 <div class="sh_app__item item" data-item-name="${itemsArray[i].name}" data-item-type="house">
-                    <img src="/images/smartHouseApp/houses/house-256.png" alt="house_icon" class="item__logo">
+                    <img src="./images/smartHouseApp/houses/house-256.png" alt="house_icon" class="item__logo">
                     <div class="item__title">${itemsArray[i].name}</div>
                 </div>  
                 `;                
