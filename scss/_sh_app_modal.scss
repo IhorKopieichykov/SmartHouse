@@ -1,0 +1,234 @@
+/* --- MODAL -----*/
+// .sh_app__modal {}
+
+.modal {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* цвет фона */
+    z-index: 3;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s ease-in;
+}
+
+.modal.open {
+    opacity: 1;
+    visibility: visible;    
+}
+
+.modal__window {
+    position: relative;
+    width: auto;
+    margin: 10px;
+    background-color: aliceblue;
+    border-radius: 30px;
+    // transform: translate(0px, -100%);
+    // transition: all .2s ease-in;    
+    -webkit-animation: modal-slide-up .2s ease-out forwards;
+            animation: modal-slide-up .2s ease-out forwards;
+}
+
+.modal.open .modal__window {
+    -webkit-animation: modal-slide-down .2s ease-in;
+            animation: modal-slide-down .2s ease-in;
+    // transform: translate(0px, 0%);
+}
+
+@-webkit-keyframes modal-slide-down {
+    0%{
+        transform: translate(0px, -100%);
+    }
+    100%{
+        transform: translate(0px, 0%);
+    }
+}
+
+@keyframes modal-slide-down {
+    0%{
+        transform: translate(0px, -100%);
+    }
+    100%{
+        transform: translate(0px, 0%);
+    }
+}
+@-webkit-keyframes modal-slide-up {
+    0%{
+        transform: translate(0px, 0%);
+    }
+    100%{
+        transform: translate(0px, -100%);
+    }
+}
+@keyframes modal-slide-up {
+    0%{
+        transform: translate(0px, 0%);
+    }
+    100%{
+        transform: translate(0px, -100%);
+    }
+}
+
+.modal__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal__header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 40px;
+    background-color: $purple;
+    border-radius: 30px 30px 0px 0px;
+}
+
+.modal__title {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: aliceblue;
+    text-align: center;
+}
+
+.modal__button-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 800;
+    color: aliceblue;
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+.modal__body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 5px 10px 10px 10px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.modal__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.modal__type-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal__item-type {    
+    font-size: 18px;
+    font-weight: 600;
+    width: 250px;
+    color: black;
+    border-radius: 15px;
+    border: 3px solid grey;
+    padding: 5px;    
+    transition: all .3s ease;
+    & option {
+        font: inherit;
+    }
+    // &:focus{
+    //     border-radius: 15px 15px 0px 0px;
+    // }
+}
+
+.modal__label {
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.modal__input {
+    line-height: 2;
+    font-size: 20px;
+    font-weight: 600;
+    width: 250px;
+    color: black;
+    border-radius: 20px;
+    border: 3px solid grey;
+    padding: 5px;
+}
+.modal__input_length{
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    align-self: flex-end;
+}
+
+.modal__input-error {
+    display: none;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(255, 65, 65);
+    align-self: flex-start;
+}
+.modal__message{
+    display: block;
+    padding: 10px 20px;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    align-self: center;
+    & #red{
+        text-transform: uppercase;
+        color: rgb(220, 20, 20);
+    }
+    & #purple{
+        color: $purple;
+        font-style: italic;
+    }
+}
+.modal__buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.modal__button {
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid grey;
+    font-size: 20px;
+    font-weight: 600;
+    color: aliceblue;
+}
+
+.modal__button_ok {
+    background-color: rgb(0, 190, 102);
+}
+
+.modal__button_cancel {
+    background-color: rgb(250, 44, 44);
+}

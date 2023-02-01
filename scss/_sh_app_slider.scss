@@ -1,0 +1,69 @@
+// .sliders {
+// }
+// .sliders__slider {
+// }
+.slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.slider__title {
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.slider__bar {    
+    height: 180px;
+    width: 80px;
+    // background-color: rgba(183, 0, 255, 0.2);
+    border: 2px solid $purple;
+    border-radius: 15px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    position: relative;
+    cursor: -webkit-grab;
+    cursor: grab;
+    &:active{
+        cursor: -webkit-grabbing;
+        cursor: grabbing;
+    }
+    &.unactive{
+        cursor: default;
+        pointer-events: none;
+        border: 2px solid rgb(109, 109, 109);
+        &:active{
+            cursor: default;
+        }
+    }
+    &.unactive .slider__bar_fill{
+        transition: all .1s ease-out;
+        background: linear-gradient(150deg, rgb(161, 161, 161) 0%, rgb(196, 196, 196) 50%, rgb(121, 121, 121) 100%);;
+    }
+    &.unactive .slider__bar_value{
+        color: black;
+        mix-blend-mode: normal;
+    }
+}
+.slider__bar_fill {
+    background: $purple_gradient;
+    width: 100%;
+    min-height: 5px;
+    max-height: 100%;
+    height: 100px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+.slider__bar_value{ 
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    align-self: center;
+    font-size: 20px;
+    pointer-events: none;
+    font-weight: 500;
+    color: rgb(55, 255, 0);
+    mix-blend-mode: difference;    
+}

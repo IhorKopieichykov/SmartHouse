@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'devices';
+  src:  url('fonts/devices.eot?fchqsm');
+  src:  url('fonts/devices.eot?fchqsm#iefix') format('embedded-opentype'),
+    url('fonts/devices.ttf?fchqsm') format('truetype'),
+    url('fonts/devices.woff?fchqsm') format('woff'),
+    url('fonts/devices.svg?fchqsm#devices') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+de {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'devices' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.de_fan:before {
+  content: "\e906";
+}
+.de_battery:before {
+  content: "\e909";
+}
+.de_net:before {
+  content: "\e90a";
+}
+.de_wifi:before {
+  content: "\e90b";
+}
+.de_humidifier_off:before {
+  content: "\e907";
+}
+.de_humidifier_on:before {
+  content: "\e908";
+}
+.de_conditioner_on:before {
+  content: "\e904";
+}
+.de_conditioner_off:before {
+  content: "\e905";
+}
+.de_lamp_off:before {
+  content: "\e902";
+}
+.de_lamp_on:before {
+  content: "\e903";
+}
+.de_off_on:before {
+  content: "\e901";
+}
+.de_lamp:before {
+  content: "\e900";
+}

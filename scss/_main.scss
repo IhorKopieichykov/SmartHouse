@@ -1,0 +1,12 @@
+/* -------- MAIN-------------- */
+.main {
+    display: flex;
+    flex-direction: row;
+    flex: 1 0 auto;
+}
+
+.main__smartphone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

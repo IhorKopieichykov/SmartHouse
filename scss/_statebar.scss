@@ -1,0 +1,97 @@
+.statebar {
+    display: flex;
+    position: absolute;    
+    justify-content: space-between;
+    align-items: flex-end;
+    transition: all .1s ease;
+}
+.smartphone__screen-statebar {    
+    width: 290px;
+    margin: 7px 0px 0px;
+    opacity: 0.9;
+    z-index: 7;
+}
+.statebar__left {
+    flex: 1 0 auto;
+}
+.statebar__time {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: .9;
+    letter-spacing: .7px;
+}
+.statebar__right {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+}
+.statebar__network {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 1px;
+    gap: 2px;
+    & p{
+        width: 3px;
+        background-color: rgb(255, 255, 255);
+        opacity: 0.9;
+        min-height: 1px;
+        border-radius: 1px 1px 0px 0px;
+    }
+    & p:nth-child(1){
+        height: 3px;
+    }
+    & p:nth-child(2){
+        height: 6px;
+    }
+    & p:nth-child(3){
+        height: 9px;
+    }
+    & p:nth-child(4){
+        background-color: rgba(255, 255, 255, 0.5);
+        height: 12px;
+    }
+}
+.statebar__wifi {
+    color: rgb(255, 255, 255);
+}
+.statebar__battery {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 14px;
+    border-radius: 3px;
+    // overflow: hidden;
+    background-color: rgba(155, 155, 155, 0.9);
+    & p{
+        position: absolute;
+        display: block;
+        z-index: 1;
+        right: -2px;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background-color: rgba(155, 155, 155, 0.9);
+    }
+}
+.statebar__battery_fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 54%;
+    height: 100%;
+    border-radius: 3px 0px 0px 3px;
+    background-color: rgb(255, 255, 255);
+}
+.statebar__battery_value {    
+    text-align: center;
+    position: relative;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .5px;
+    color: rgb(48, 48, 48);
+}

@@ -1,0 +1,48 @@
+.sh_app__nav {
+    position: absolute;
+    left: 10px;
+    background-color: transparent;
+}
+
+.nav {
+    visibility: visible;
+}
+
+.nav__back {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 5px;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    & div{
+        width: 18px;
+        height: 18px;
+        border-left: 5px solid rgba(0, 0, 0, 0.5);
+        border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+        border-radius: 5px 0px;
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        content: 'Back';
+        position: absolute;
+        color: rgba(0, 0, 0, 0.8);
+        font-size: 12px;
+        bottom: -10px;
+        left: 5%;
+    }
+
+    &:hover {
+        &::after {
+            color: rgb(0, 0, 0);
+            font-weight: 500;
+        }
+        & div{
+            border-left: 5px solid rgb(0, 0, 0);
+            border-bottom: 5px solid rgb(0, 0, 0);
+        }
+    }
+}

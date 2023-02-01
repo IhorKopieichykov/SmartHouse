@@ -1,0 +1,54 @@
+.sh_app__body {
+    font-family: 'DM Sans', sans-serif;
+    color: black;
+    width: 100%;
+    height: 565px;
+    margin-top: 100px;
+    transition: all .2s ease;
+    background-color: aliceblue;
+    padding: 10px 15px 90px 15px;
+    overflow: auto;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    &.short{
+        margin-top: 40px;
+        height: 625px;
+    }
+    &.long{
+        margin-top: 100px;
+        height: 565px;
+    }
+}
+
+
+.sh_app__body-header {
+    min-height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0px 10px 10px 10px;
+}
+
+.sh_app__pagename {
+    font-size: 20px;
+    font-weight: 500;
+    width: 200px;
+    word-break: break-all;
+    text-align: center;
+    // overflow: hidden;
+    // white-space: nowrap;
+    // animation: type 13s steps(20, end);
+}
+
+
+.sh_app__dropdown {
+    position: absolute;
+    right: -10px;
+    top: -5px;
+}

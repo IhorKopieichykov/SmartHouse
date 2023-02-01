@@ -1,0 +1,81 @@
+.sh_app__scrollup {
+    position: absolute;
+    right: 15px;
+    opacity: 0;
+    bottom: 0;
+    visibility: hidden;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(240, 248, 255, 0.8);
+    border: 1px solid rgba(70, 0, 98, 0.6);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: rgba(70, 0, 98, 0.6);
+    font-weight: 600;    
+    &:hover{
+        cursor: pointer;
+        background-color: rgba(240, 248, 255, 0.9);
+        border: 1px solid rgba(70, 0, 98, 1);
+        color: rgba(70, 0, 98, 1);
+    }
+    &.show{
+        -webkit-animation: show_scrollup .2s ease forwards;
+                animation: show_scrollup .2s ease forwards;
+    }
+    &.hide{
+        -webkit-animation: hide_scrollup .2s ease forwards;
+                animation: hide_scrollup .2s ease forwards;
+    }
+}
+@-webkit-keyframes show_scrollup{
+    from{
+        opacity: 0;
+        bottom: 0;
+        visibility: hidden;
+    }
+    to{
+        opacity: 1;
+        bottom: 30px;
+        visibility: visible;
+    }
+}
+@keyframes show_scrollup{
+    from{
+        opacity: 0;
+        bottom: 0;
+        visibility: hidden;
+    }
+    to{
+        opacity: 1;
+        bottom: 30px;
+        visibility: visible;
+    }
+}
+@-webkit-keyframes hide_scrollup{
+    from{
+        opacity: 1;
+        bottom: 30px;
+        visibility: visible;
+    }
+    to{
+        opacity: 0;
+        bottom: 0;
+        visibility: hidden;
+    }
+}
+@keyframes hide_scrollup{
+    from{
+        opacity: 1;
+        bottom: 30px;
+        visibility: visible;
+    }
+    to{
+        opacity: 0;
+        bottom: 0;
+        visibility: hidden;
+    }
+}
