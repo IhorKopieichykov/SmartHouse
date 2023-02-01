@@ -23,7 +23,7 @@ export function renderStart(container, app){
         </div>
         <div class="smartphone__screen-touchscreen touchscreen">  
             <div class="touchscreen__smarthouse_app sh_app">
-                <div class="sh_app__header ">
+                <div class="sh_app__header preview">
                     <img class="sh_app__logo" src="./images/smartHouseApp/houses/house-512.png" alt="logo">
                     <div class="sh_app__title">Smart House</div>
                 </div>
