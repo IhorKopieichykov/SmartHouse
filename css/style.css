@@ -66,7 +66,7 @@ img {
 /* -----------------STYLES-------------*/
 body {
   font-family: "DM Sans", sans-serif;
-  background: linear-gradient(0deg, rgba(249, 255, 102, 1) 0%, rgba(124, 116, 255, 1) 100%) 0 0/100% 100% repeat-y;
+  background: linear-gradient(0deg, rgb(249, 255, 102) 0%, rgb(124, 116, 255) 100%) 0 0/100% 100% repeat-y;
   font-size: 16px;
 }
 
@@ -136,7 +136,7 @@ body {
 .smartphone::before {
   content: "";
   position: absolute;
-  z-index: 10;
+  z-index: 15;
   display: block;
   right: -11px;
   top: 130px;
@@ -149,7 +149,7 @@ body {
 .smartphone::after {
   content: "";
   position: absolute;
-  z-index: 10;
+  z-index: 15;
   display: block;
   right: 44%;
   bottom: -7px;
@@ -1006,8 +1006,7 @@ body {
   min-height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
-  /* цвет фона */
-  z-index: 3;
+  z-index: 5;
   margin: 0;
   padding: 0;
   visibility: hidden;

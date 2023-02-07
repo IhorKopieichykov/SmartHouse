@@ -51,12 +51,12 @@ export function renderTypeSelection(app, page, block) {
                         <option value="bath">Bathroom</option>
                         <option value="other">Other</option>`;
                     block.insertAdjacentHTML('beforeend', content);
+                    selectCurrentOption(app);
                     break;
         
                 default:
                     break;
-            }
-            selectCurrentOption(app);
+            }            
             break;
 
         case 'delete':        
